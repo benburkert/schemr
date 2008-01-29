@@ -1,0 +1,47 @@
+!!! :xcard
+  < :vcard
+    <? :bday
+    <? :class
+    <  :fn
+    <? :rev
+    <* :adr
+      <? :type => [:work, :home, :pref, :postal, :dom, :intl]
+      <? "post-office-box"
+      <? "extended-address"
+      <? :region
+      <? :locality
+      <? "postal-code"
+      <? "country-name"
+      <* "street-address"
+    <* :agent
+    <* :email
+      <? :type
+      <? :value
+    <? :geo
+      <? :latitude
+      <? :longitude
+    <* :key
+    <* :logo
+    <* :mailer
+    <? :n
+      <* "honorific-prefix"
+      <* "given-name"
+      <* "additional-name"
+      <* "family-name"
+      <* "honorific-sufix"
+    <* :nickname
+    <* :note
+    <* :org
+      <? "orginization-name"
+      <* "orginization-unit"
+    <* :photo
+    <* :role
+    <? "sort-string"
+    <* :sound
+    <* :title
+    <* :tel
+      <? :type => [:home, :work, :pref, :fax, :cell, :pager]
+      <? :value
+    <? :tz
+    <? :uid
+    <* :url

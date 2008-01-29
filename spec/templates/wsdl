@@ -1,0 +1,26 @@
+!!! :wsdl
+  <? :definitions
+    ^? :targetNamespace => uri
+    ^? :name
+    
+    <  :types
+    
+    <* :message
+      ^  :name
+      
+      <* :part
+        ^  :name
+        ^? :element
+    
+    <* :portType
+      ^  :name
+      
+      < :operation
+        ^  :name
+        <? :input
+          ^ :message
+        <?  :output
+          ^  :message
+        <* :fault
+          ^ :message
+        

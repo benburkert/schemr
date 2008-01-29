@@ -1,0 +1,8 @@
+!!! :cpsc_department
+  < :department
+    <* :employee
+      ^ :id
+      <  :name
+      <? :email
+      <? :url
+        ^ :href

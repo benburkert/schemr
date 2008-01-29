@@ -1,0 +1,78 @@
+!!! :wadl
+  !! :doc
+    ^ "xml:lang"
+    ^ :title
+  !! :option
+    ^ :value
+    # :doc
+  !! :param
+    ^  :id
+    ^  :name
+    ^  :style => ["matrix", "header", "query", "template", "plain"]
+    ^? :type
+    ^? :default
+    ^? :required => ["true", "false"]
+    ^? :repeating => ["true", "false"]
+    ^? :fixed => ["true", "false"]
+    #* :doc
+    #* :option
+    #? :link
+  !! :representation
+    ^  :id
+    ^  :mediaType
+    ^  :profile
+    ^? :element
+    ^? :status
+    #  :param
+  !! :fault << :representation
+  
+  !! :request
+    #* :doc
+    #* :representation
+    #* :param
+      ^ :style => ["query", "header"]
+  
+  !! :response
+    #* :doc
+    #* :representation
+    #* :fault
+    #* :param
+      ^ :style => ["header"]
+  
+  !! :method
+    ^? :href
+    ^? :name
+    ^? :id
+    #* :doc
+    #  :request
+    #  :response
+    
+    !! :resource
+      ^? :id
+      ^? :path
+      ^? :type
+      ^? :queryType
+      #* :doc
+      #* :param
+        ^ :style => ["template", "matrix", "query", "header"]
+      <* :method
+      #* :resource
+      
+  < :application
+    ^ :xmlns => "http://research.sun.com/wadl/2006/10"
+    #* :doc
+    <? :grammars
+      <* :include
+        ^ :href
+    <? :resources
+      ^ :base
+      #* :resource
+    <* :resource_type
+      ^ :id
+      #* :doc
+      #* :param
+        ^ :style => ["query", "header"]
+      <* :method
+    <* :method
+    #* :representation
+    #* :fault

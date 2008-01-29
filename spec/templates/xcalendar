@@ -1,0 +1,17 @@
+!!! :xcalendar
+  < :vevent
+    <* :category
+    <? :class
+    <? :description
+    <? :dtend
+    <  :dtstart
+    <? :duration
+    <? :geo
+      <? :latitude
+      <? :longitude
+    <? :location
+    <? :status
+    <  :summary
+    <? :uid
+    <? :url
+    <? "last-modified"
